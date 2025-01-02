@@ -25,3 +25,20 @@ Arquivos implantados no diretório padrão do Apache.
 Servidor Apache lançado e em operação.  
 
 ![dio-projeto-2 2](https://github.com/user-attachments/assets/753e1a49-a4a6-41f0-8b2b-2c91cb715118)  
+
+#
+
+# Desafio 3
+### Docker Compose para Servidor Apache
+docker-compose.yml 
+```yml
+services:
+  apache:
+    image: httpd:latest
+    container_name: my-apache-app
+    ports:
+    - '80:80'
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
+```
+
